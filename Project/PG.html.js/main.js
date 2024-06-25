@@ -309,13 +309,13 @@ function goToSite(index) {
       "../PG.Quiz/Quiz.html";
   } else if (index === 1) {
     window.location.href =
-      "/../studentSystem.html.js/p1.html";
+      "../studentSystem.html.js/p1.html";
   } else if (index === 2) {
     window.location.href =
-      "file:///Users/pushkalgupta/Desktop/JavaScript/Project/employeeSystem.html.js/p2.html";
+      "../employeeSystem.html.js/p2.html";
   } else if (index === 3) {
     window.location.href =
-      "file:///Users/pushkalgupta/Desktop/JavaScript/Project/chess.html.js/p3.html#";
+      "../chess.html.js/p3.html#";
   } else if (index === 4) {
     window.location.href =
       "../PG.html.js/main.html#";
