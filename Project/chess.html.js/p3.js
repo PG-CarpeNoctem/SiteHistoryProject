@@ -74,7 +74,7 @@ function dataReload() {
   ];
   baseImagePath =
     "../chess.html.js/images/";
-  pieceImagePaths = ["pieces/", "piecesClassic/", "piecesWooden/"];
+  pieceImagePaths = ["pieces/", "piecesClassic/", "piecesWooden/", "piecesVirtual/"];
   imagePath = baseImagePath + pieceImagePaths[0];
   pieceImageArr = [
     "pawn+white.png",
@@ -1719,17 +1719,21 @@ function colorChanged(index) {
 }
 function changePieceType() {
   let menuStr =
-    "<div class='btn-group-horizontal radio-piece-class justify-content-center' role='group'><input type='radio' class='btn-check' name='radio1' id='r1' autocomplete='off' checked><label class='btn btn-outline-light' for='r1'><img src = '" +
+    "<div class='btn-group-horizontal radio-piece-class justify-content-center' role='group'><input type='radio' class='btn-check' name='radio1' id='r0' autocomplete='off' checked><label class='btn btn-outline-light' for='r0'><img src = '" +
     baseImagePath +
     pieceImagePaths[0] +
     pieceImageArr[0] +
-    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r2' autocomplete='off' ><label class='btn btn-outline-light' for='r2'><img src = '" +
+    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r1' autocomplete='off' ><label class='btn btn-outline-light' for='r1'><img src = '" +
     baseImagePath +
     pieceImagePaths[1] +
     pieceImageArr[0] +
-    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r3' autocomplete='off' ><label class='btn btn-outline-light' for='r3'><img src = '" +
+    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r2' autocomplete='off' ><label class='btn btn-outline-light' for='r2'><img src = '" +
     baseImagePath +
     pieceImagePaths[2] +
+    pieceImageArr[0] +
+    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r3' autocomplete='off' ><label class='btn btn-outline-light' for='r3'><img src = '" +
+    baseImagePath +
+    pieceImagePaths[3] +
     pieceImageArr[0] +
     "' class = 'radio-img-piece'></label></div>";
   document.getElementById("dd1menu").innerHTML = menuStr;
@@ -1741,10 +1745,12 @@ function changePieceType() {
   });
 }
 function pieceTypeChange(id) {
-  if (id === "r1") {
+  if (id === "r0") {
     imagePath = baseImagePath + pieceImagePaths[0];
-  } else if (id === "r2") {
+  } else if (id === "r1") {
     imagePath = baseImagePath + pieceImagePaths[1];
+  } else if (id === "r2") {
+    imagePath = baseImagePath + pieceImagePaths[2];
   } else if (id === "r3") {
     imagePath = baseImagePath + pieceImagePaths[2];
   }
