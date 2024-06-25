@@ -73,7 +73,7 @@ function dataReload() {
     "<div class='icon-label2'><i class='fa-solid fa-sun icon' style='color:#FDDA0D'></i>",
   ];
   baseImagePath =
-    "file:///Users/pushkalgupta/Desktop/JavaScript/Project/chess.html.js/images/";
+    "../chess.html.js/images/";
   pieceImagePaths = ["pieces/", "piecesClassic/", "piecesWooden/"];
   imagePath = baseImagePath + pieceImagePaths[0];
   pieceImageArr = [
