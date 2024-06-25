@@ -1752,7 +1752,7 @@ function pieceTypeChange(id) {
   } else if (id === "r2") {
     imagePath = baseImagePath + pieceImagePaths[2];
   } else if (id === "r3") {
-    imagePath = baseImagePath + pieceImagePaths[2];
+    imagePath = baseImagePath + pieceImagePaths[3];
   }
   makeBoard();
 }
