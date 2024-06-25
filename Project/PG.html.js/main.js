@@ -306,10 +306,10 @@ function moreDetails(indexCheck) {
 function goToSite(index) {
   if (index === 0) {
     window.location.href =
-      "file:///Users/pushkalgupta/Desktop/JavaScript/Project/PG.Quiz/Quiz.html";
+      "../PG.Quiz/Quiz.html";
   } else if (index === 1) {
     window.location.href =
-      "file:///Users/pushkalgupta/Desktop/JavaScript/Project/studentSystem.html.js/p1.html";
+      "/../studentSystem.html.js/p1.html";
   } else if (index === 2) {
     window.location.href =
       "file:///Users/pushkalgupta/Desktop/JavaScript/Project/employeeSystem.html.js/p2.html";
@@ -318,6 +318,6 @@ function goToSite(index) {
       "file:///Users/pushkalgupta/Desktop/JavaScript/Project/chess.html.js/p3.html#";
   } else if (index === 4) {
     window.location.href =
-      "file:///Users/pushkalgupta/Desktop/JavaScript/Project/PG.html.js/main.html#";
+      "../PG.html.js/main.html#";
   }
 }
