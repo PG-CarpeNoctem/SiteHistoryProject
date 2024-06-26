@@ -1606,7 +1606,7 @@ function defaultBoardUI1() {
     clr1x +
     "') disabled></input></div><div class='input-group input-group-pkr w-100'><div class='input-group-text menu-block  menu-block-highlight-width-default'>Highlighted Color 2:</div><input type='color' class='form-control form-control-color-pkr' id='colorPicker4' value='" +
     clr2x +
-    "' disabled></input></div>><div class='btn-group-vertical w-100' role='group'><div class='input-group input-group-pkr w-100'><div class='form-check form-switch menu-block w-100'><label class='form-check-label' for='colRowSwitch'>Show Column & Row:</label><input class='form-check-input' type='checkbox' role='switch' id='colRowSwitch' checked disabled></div></div></div></div>";
+    "' disabled></input></div>><div class='btn-group-vertical w-100' role='group'><div class='input-group input-group-pkr w-100'><div class='form-check form-switch menu-block w-100'><label class='form-check-label' for='colRowSwitch'>Column & Row :</label><input class='form-check-input' type='checkbox' role='switch' id='colRowSwitch' checked disabled></div></div></div></div>";
   document.getElementById("dd1menu").innerHTML = menuStr;
 }
 function changeBoardColorUI() {
@@ -1765,7 +1765,7 @@ function pieceTypeChange(id) {
 function showColRow() {
   let str = colRowBool ? "checked" : "";
   let menuStr =
-    "<div class='btn-group-vertical w-100' role='group'><div class='input-group input-group-pkr w-100'><div class='form-check form-switch menu-block w-100'><label class='form-check-label' for='colRowSwitch'>Show Column & Row:</label><input class='form-check-input' type='checkbox' role='switch' id='colRowSwitch' " +
+    "<div class='btn-group-vertical w-100' role='group'><div class='input-group input-group-pkr w-100'><div class='form-check form-switch menu-block w-100'><label class='form-check-label' for='colRowSwitch'>Column & Row :</label><input class='form-check-input' type='checkbox' role='switch' id='colRowSwitch' " +
     str +
     "></div></div></div>";
   document.getElementById("dd1menu").innerHTML = menuStr;
