@@ -232,7 +232,7 @@ function makeCell(row, col) {
   let possibleMoveStr = "";
   let extraInfoStr = "";
   let labelStr =
-    col === 0 ? "<div class = 'p-1 label-col-box'>" + (8 - row) + "</div>" : "";
+    col === 0 && colRowBool ? "<div class = 'p-1 label-col-box'>" + (8 - row) + "</div>" : "";
   num = showMovesArr.findIndex(function (ele) {
     return ele.row === row && ele.col === col;
   });
@@ -319,7 +319,7 @@ function makeBoard() {
     "<div class = 'containerFrame'>" +
     str +
     "<div class='row row-cols-8 abcd-label-padding'>" +
-    labelArrMap.join("") +
+    (colRowBool ? labelArrMap.join("") : "") +
     "</div></div>";
   if (time === "") {
     displayStr =
@@ -1530,7 +1530,7 @@ function dd1Actions() {
   } else if (index === 5) {
     changePieceType();
   } else if (index === 6) {
-    showLabels();
+    showColRow();
   } else if (index === 7) {
     changeThemesUI();
   } else if (index === 8) {
@@ -1762,6 +1762,23 @@ function pieceTypeChange(id) {
   }
   makeBoard();
 }
+function showColRow() {
+  let str = colRowBool ? "checked" : "";
+  let menuStr =
+    "<div class='btn-group-vertical w-100' role='group'><div class='input-group input-group-pkr w-100'><div class='form-check form-switch menu-block w-100'><label class='form-check-label' for='colRowSwitch'>Show Column & Row </label><input class='form-check-input' type='checkbox' role='switch' id='colRowSwitch' " +
+    str +
+    "></div></div></div>";
+  document.getElementById("dd1menu").innerHTML = menuStr;
+  const colRowInput = document.getElementById("colRowSwitch");
+  colRowInput.addEventListener("change", function () {
+    if (this.checked) {
+      colRowBool = true;
+    } else {
+      colRowBool = false;
+    }
+    makeBoard();
+  });
+}
 
 //LeftBar dd2
 function defaultBoardUI2() {
@@ -1908,6 +1925,8 @@ function makeDefaultColors() {
 }
 function makeDefaultUISettings1() {
   makeDefaultColors();
+  colRowBoolInitial = true;
+  colRowBool = colRowBoolInitial;
   imagePath = baseImagePath + pieceImagePaths[0];
 }
 function makeDefaultUISettings2() {
