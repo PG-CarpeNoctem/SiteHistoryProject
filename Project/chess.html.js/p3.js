@@ -231,8 +231,12 @@ function makeCell(row, col) {
   let pieceStr = "";
   let possibleMoveStr = "";
   let extraInfoStr = "";
-  let labelStr =
-    col === 0 && colRowBool ? "<div class = 'p-1 label-col-box'>" + (8 - row) + "</div>" : "";
+  let labelStr = "";
+  if (col === 0) {
+    labelStr = colRowBool
+      ? "<div class = 'p-1 label-col-box'>" + (8 - row) + "</div>"
+      : "<div class = 'p-1 label-col-box'></div>";
+  } else labelStr = "";
   num = showMovesArr.findIndex(function (ele) {
     return ele.row === row && ele.col === col;
   });
