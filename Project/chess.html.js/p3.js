@@ -74,7 +74,7 @@ function dataReload() {
   ];
   baseImagePath =
     "../chess.html.js/images/";
-  pieceImagePaths = ["pieces/", "piecesClassic/", "piecesWooden/", "piecesVirtual/"];
+  pieceImagePaths = ["piecesClassic/", "pieces/", "piecesVirtual/", "piecesWooden/"];
   imagePath = baseImagePath + pieceImagePaths[0];
   pieceImageArr = [
     "pawn+white.png",
