@@ -884,7 +884,7 @@ function pawnPromotion(row, col, color) {
     str += "</div></div>";
   }
   let labelArrMap = labelArr.map(function (ele) {
-    return "<div class='cellBox abcd-label'></div>";
+    return "<div class='virtualBox abcd-label'></div>";
   });
   virtualBoardStr =
     "<div class = 'containerFrame-virtual'>" +
