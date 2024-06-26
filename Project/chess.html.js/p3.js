@@ -74,7 +74,7 @@ function dataReload() {
   ];
   baseImagePath =
     "../chess.html.js/images/";
-  pieceImagePaths = ["piecesClassic/", "pieces/", "piecesVirtual/", "piecesWooden/"];
+  pieceImagePaths = ["piecesClassic/", "pieces/", "piecesVirtual/","piecesCartoon/", "piecesWooden/"];
   imagePath = baseImagePath + pieceImagePaths[0];
   pieceImageArr = [
     "pawn+white.png",
@@ -1723,7 +1723,7 @@ function changePieceType() {
     baseImagePath +
     pieceImagePaths[0] +
     pieceImageArr[0] +
-    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r1' autocomplete='off' ><label class='btn btn-outline-light' for='r1'><img src = '" +
+    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r1' autocomplete='off'><label class='btn btn-outline-light' for='r1'><img src = '" +
     baseImagePath +
     pieceImagePaths[1] +
     pieceImageArr[0] +
@@ -1734,6 +1734,10 @@ function changePieceType() {
     "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r3' autocomplete='off' ><label class='btn btn-outline-light' for='r3'><img src = '" +
     baseImagePath +
     pieceImagePaths[3] +
+    pieceImageArr[0] +
+    "' class = 'radio-img-piece'></label><input type='radio' class='btn-check' name='radio1' id='r4' autocomplete='off' ><label class='btn btn-outline-light' for='r4'><img src = '" +
+    baseImagePath +
+    pieceImagePaths[4] +
     pieceImageArr[0] +
     "' class = 'radio-img-piece'></label></div>";
   document.getElementById("dd1menu").innerHTML = menuStr;
@@ -1753,6 +1757,8 @@ function pieceTypeChange(id) {
     imagePath = baseImagePath + pieceImagePaths[2];
   } else if (id === "r3") {
     imagePath = baseImagePath + pieceImagePaths[3];
+  } else if (id === "r4") {
+    imagePath = baseImagePath + pieceImagePaths[4];
   }
   makeBoard();
 }
