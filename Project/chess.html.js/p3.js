@@ -1779,6 +1779,11 @@ function showColRow() {
     makeBoard();
   });
 }
+function changeThemesUI() {
+  showCustomAlert("Under Maintenance");
+  document.getElementById("dd1").value = leftBarArrAll[0];
+  document.getElementById("dd1menu").innerHTML = "";
+}
 
 //LeftBar dd2
 function defaultBoardUI2() {
